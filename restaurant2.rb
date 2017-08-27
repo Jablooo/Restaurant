@@ -5,13 +5,15 @@ class Pasta
     @ingredients = ingredients
     @price = price
   end
+
+  attr_accessor :name, :ingredients, :price
 # - What does it do
   def show_pasta_ingredients
     @name.each do |pastaType|
       puts "- #{pastaType.ingredients}"
     end
   end
-attr_accessor :name, :ingredients, :price
+
 end
 
 spagBol = Pasta.new("Spaghetti Bolognese", ["tomato", "beef", "parmesan"], 10)
@@ -26,13 +28,15 @@ class Pizza
     @ingredients = ingredients
     @price = price
   end
+
+  attr_accessor :name, :ingredients, :price
 # - What does it do
   def show_pizza_ingredients
     @name.each do |pizzaType|
       puts "- #{pizzaType.ingredients}"
     end
   end
-attr_accessor :name, :ingredients, :price
+
 end
 
 fourCheese = Pizza.new("Four Cheeses", ["tomato", "gorgonzola", "mozzarella", "cheddar", "goats cheese"], 12)
@@ -186,7 +190,7 @@ while runner == 0
   if menuAnswer == 1
     gap
     puts "                  Pastas"
-    puts pastaMenu.show_items
+    pastaMenu.show_items
     gap
     puts "    press return to go back to main menu"
     gets.chomp
@@ -194,7 +198,7 @@ while runner == 0
   elsif menuAnswer == 2
     gap
     puts "                  Pizzas"
-    puts pizzaMenu.show_items
+    pizzaMenu.show_items
     gap
     puts "    press return to go back to main menu"
     gets.chomp
